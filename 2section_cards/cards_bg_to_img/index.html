@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="fone-blur"></div>
+        <img src="https://i.pinimg.com/originals/fd/30/df/fd30df2476ed50dbedd25bd723c2381c.gif" class="bg-img">
+        <div class="content">
+            <div class="title">
+                РЕбрендинг
+            </div>
+            <div class="subtitle">
+                Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="fone-blur"></div>
+        <img src="https://i.pinimg.com/originals/5c/5c/68/5c5c687eb88b3f97deea0710be5ac0b3.gif" class="bg-img">
+        <div class="content">
+            <div class="title">
+                брендинг
+            </div>
+            <div class="subtitle">
+                Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="fone-blur"></div>
+        <img src="https://i.pinimg.com/originals/1d/2b/9c/1d2b9c185fde0e60a2bb2318113ab355.gif" class="bg-img">
+        <div class="content">
+            <div class="title">
+                МАСКОТ
+            </div>
+            <div class="subtitle">
+                Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            background: url(group-74.png) no-repeat center / 100%;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 480px;
+            height: 710px;
+        }
+
+        .fone-blur {
+            opacity: 1;
+            transition: all 0.3s;
+            position: absolute;
+            width: 480px;
+            height: 710px;
+            /* flex-shrink: 0; */
+            background: url(img.png) no-repeat center / cover, #ffffff;
+        }
+        .wrapper:hover .fone-blur {
+            background: #ffffff;
+            
+        }
+
+        .bg-img {
+            top: 0;
+            width: 100%;
+            /* height: 100%; */
+            position: absolute;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 0 60px;
+            height: 100%;
+        }
+
+        .wrapper:hover .content .title {
+            color: rgb(61, 61, 61);
+            text-align: center;
+            font-size: 43px;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            text-transform: uppercase;
+            transform: translateY(414px);
+
+        }
+
+        .content .title {
+            color: rgb(61, 61, 61);
+            text-align: center;
+            font-size: 43px;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            margin-top: 32px;
+            text-transform: uppercase;
+            transform: translateY(0);
+            transition: all 0.3s;
+        }
+
+        .content .subtitle {
+            position: absolute;
+            bottom: 96px;
+            color: rgb(61, 61, 61);
+            font-size: 20px;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            opacity: 0;
+            transition: all 0.3s ease-in;
+        }
+
+        .wrapper:hover .content .subtitle {
+            opacity: 1;
+        }
+
+        .wrapper:hover .bg-img {
+            opacity: 1;
+        }
+    </style>
+</body>
+
+</html>
