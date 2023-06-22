@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер третей секции</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        /* display: flex;
+        justify-content: center; */
+        background: rgb(207, 207, 207);
+    }
+
+    .slide {
+        position: relative;
+        /* width: 480px; */
+        height: 900px;
+        /* margin-top: 30px; */
+    }
+
+    .fone-blur {
+        opacity: 1;
+        transition: all 0.3s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* flex-shrink: 0; */
+        background: url(img.png) no-repeat center / cover, #ffffff;
+    }
+
+    .slide:hover .fone-blur {
+        background: #ffffff;
+
+    }
+
+    .bg-img {
+        top: 0;
+        width: 100%;
+        /* height: 100%; */
+        position: absolute;
+        transition: all 0.3s;
+        opacity: 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 0 60px;
+        height: 100%;
+    }
+
+    .slide:hover .content .title {
+        color: rgb(61, 61, 61);
+        text-align: center;
+        font-size: 43px;
+        font-family: Gotham Pro;
+        line-height: 160%;
+        text-transform: uppercase;
+        transform: translateY(614px);
+
+    }
+
+    .content .title {
+        color: rgb(61, 61, 61);
+        text-align: center;
+        font-size: 43px;
+        font-family: Gotham Pro;
+        line-height: 160%;
+        margin-top: 32px;
+        text-transform: uppercase;
+        transform: translateY(0);
+        transition: all 0.3s;
+    }
+
+    .content .subtitle {
+        position: absolute;
+        bottom: 96px;
+        color: rgb(61, 61, 61);
+        font-size: 20px;
+        font-family: Gotham Pro;
+        line-height: 160%;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+    }
+
+    .slide:hover .content .subtitle {
+        opacity: 1;
+    }
+
+    .slide:hover .bg-img {
+        opacity: 1;
+    }
+</style>
+<style>
+    .center {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slide {
+        /* height: 400px; */
+        /* width: 800px; */
+        background-color: gray;
+        border: 1px solid gray;
+    }
+
+    .slide {
+        margin: 0 10px;
+        scale: 0.9;
+        opacity: 0.5;
+        transition: all 0.3s;
+    }
+
+    .test {
+        scale: 1;
+        opacity: 1;
+        transition: all 0.3s;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div class="slide test">
+            <div class="fone-blur"></div>
+            <img src="https://i.pinimg.com/originals/fd/30/df/fd30df2476ed50dbedd25bd723c2381c.gif" class="bg-img">
+            <div class="content">
+                <div class="title">
+                    РЕбрендинг
+                </div>
+                <div class="subtitle">
+                    Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="fone-blur"></div>
+            <img src="https://i.pinimg.com/originals/5c/5c/68/5c5c687eb88b3f97deea0710be5ac0b3.gif" class="bg-img">
+            <div class="content">
+                <div class="title">
+                    брендинг
+                </div>
+                <div class="subtitle">
+                    Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="fone-blur"></div>
+            <img src="https://i.pinimg.com/originals/1d/2b/9c/1d2b9c185fde0e60a2bb2318113ab355.gif" class="bg-img">
+            <div class="content">
+                <div class="title">
+                    МАСКОТ
+                </div>
+                <div class="subtitle">
+                    Более подробное описание для этой услуги, которое будет более наполненным по содержанию
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../../index.html" class="back">
+        <button>Вернуться назад</button>
+    </a>
+    <style>
+        .back button {
+            padding: 20px;
+            z-index: 10;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 10px;
+        }
+    </style>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.center').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 2,
+                initialSlide: 1,
+                // variableWidth: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                    }
+                ]
+            });
+
+            $('.center').on('afterChange', function (event, slick, currentSlide) {
+                var $slickCurrent = $(this).find('.slick-current');
+                var $prevSlickCurrent = $slickCurrent.prev();
+
+                // Добавляем класс 'test' блоку с классом 'slick-current' и предыдущему блоку
+                $slickCurrent.add($prevSlickCurrent).addClass('test');
+
+                // Удаляем класс 'test' у остальных блоков, кроме блока с классом 'slick-current' и предыдущего
+                $(this).find('.slick-slide').not($slickCurrent).not($prevSlickCurrent).removeClass('test');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
