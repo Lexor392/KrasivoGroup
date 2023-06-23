@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-background {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+            background: url(backgrounds/bg-img.png) no-repeat center / cover;
+        }
+
+        .section-background .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-background .cards .card {
+            margin: 40px 20px;
+            width: 560px;
+            height: 316px;
+            border: 1px solid #FFF;
+            color: #fff;
+            flex-shrink: 0;
+            background: lightgray 50% / cover no-repeat;
+            display: grid;
+            justify-content: center;
+        }
+
+        .section-background .cards .card .title {
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 30px;
+            text-align: center;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            text-transform: uppercase;
+            margin-top: 53px;
+        }
+
+        .section-background .cards .card .subtitle {
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 17px;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            text-transform: uppercase;
+            display: flex;
+            max-width: 410px;
+            margin: 0 auto;
+            height: 97px;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .section-background .cards .card a {
+            color: #fff;
+            opacity: 0;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 0 auto;
+            text-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+            font-size: 20px;
+            font-family: Gotham Pro;
+            line-height: 160%;
+            text-transform: uppercase;
+        }
+
+        .section-background .cards .card2,
+        .section-background .cards .card2 a,
+        .section-background .cards .card4,
+        .section-background .cards .card4 a {
+            color: #616161;
+        }
+
+
+        .section-background .cards .card1 {
+            background: url(card1.png) no-repeat center;
+        }
+
+        .section-background .cards .card2 {
+            background: url(card2.png) no-repeat center;
+        }
+
+        .section-background .cards .card3 {
+            background: url(card3.png) no-repeat center;
+        }
+
+        .section-background .cards .card4 {
+            background: url(card4.png) no-repeat center;
+        }
+
+        .section-background .cards .card:hover {
+            backdrop-filter: blur(15px);
+        }
+
+        .section-background .cards .card1:hover {
+            background: rgba(254, 95, 66, 0.30);
+        }
+
+        .section-background .cards .card2:hover {
+            background: rgba(217, 217, 217, 0.30);
+        }
+
+        .section-background .cards .card3:hover {
+            background: rgba(86, 86, 86, 0.30);
+        }
+
+        .section-background .cards .card4:hover {
+            background: rgba(217, 217, 217, 0.30);
+        }
+
+        .section-background .bg {
+            opacity: 0;
+            transition: all 0.3s ease;
+            /* transform: translateX(-100%); */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-background .bg.active {
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+            /* transform: translateX(0); */
+        }
+
+        .section-background .bg1 {
+            background: url(backgrounds/bg-img1.png) no-repeat center / cover;
+        }
+
+        .section-background .bg2 {
+            background: url(backgrounds/bg-img2.png) no-repeat center / cover;
+        }
+
+        .section-background .bg3 {
+            background: url(backgrounds/bg-img3.png) no-repeat center / cover;
+        }
+
+        .section-background .bg4 {
+            background: url(backgrounds/bg-img4.png) no-repeat center / cover;
+        }
+
+        .section-background .cards .card:hover div,
+        .section-background .cards .card:hover a {
+            opacity: 1;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-background">
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+        <div class="cards">
+            <div class="card card1">
+                <div class="title">О МАРКЕТ</div>
+                <div class="subtitle">Краткое описание кейса, которое будет отображаться при наведении</div>
+                <a href="#">СМОТРЕТЬ КЕЙС</a>
+            </div>
+            <div class="card card2">
+                <div class="title">О МАРКЕТ</div>
+                <div class="subtitle">Краткое описание кейса, которое будет отображаться при наведении</div>
+                <a href="#">СМОТРЕТЬ КЕЙС</a>
+            </div>
+            <div class="card card3">
+                <div class="title">О МАРКЕТ</div>
+                <div class="subtitle">Краткое описание кейса, которое будет отображаться при наведении</div>
+                <a href="#">СМОТРЕТЬ КЕЙС</a>
+            </div>
+            <div class="card card4">
+                <div class="title">О МАРКЕТ</div>
+                <div class="subtitle">Краткое описание кейса, которое будет отображаться при наведении</div>
+                <a href="#">СМОТРЕТЬ КЕЙС</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.card').hover(function () {
+                var index = $(this).index() + 1;
+                $('.bg' + index).addClass('active');
+            }, function () {
+                var index = $(this).index() + 1;
+                $('.bg' + index).removeClass('active');
+            });
+        });
+    </script>
+
+
+    <a href="../../index.html" class="back">
+        <button>Вернуться назад</button>
+    </a>
+    <style>
+        .back button {
+            padding: 20px;
+            z-index: 10;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+
+</html>
